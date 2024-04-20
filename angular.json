@@ -25,9 +25,16 @@
               "src/assets"
             ],
             "styles": [
+              "src/common.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [             
+            "node_modules/jquery/dist/jquery.js",
+            "node_modules/jquery-ui/dist/jquery-ui.min.js",
+            "node_modules/bootstrap/dist/js/bootstrap.js",
+            "node_modules/face-api.js/dist/face-api.js"
+           ]
           },
           "configurations": {
             "production": {
@@ -87,12 +94,17 @@
               "src/assets"
             ],
             "styles": [
+              "src/common.scss",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [ 
+            "node_modules/face-api.js/dist/face-api.js"]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d4172ef4-1eba-4643-b444-35e96a03a6ce"
   }
 }

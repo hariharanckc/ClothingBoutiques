@@ -1,0 +1,278 @@
+<button (click)="logout()">logout</button>
+<!-- <div class="container">
+
+    <div class="header">
+        <div class="hleft">
+            <h2>ClothingBoutiques</h2>
+        </div>
+        <div class="hright">
+        </div>
+    </div>
+
+    <div class="body">
+<div class="bleft">
+        <img src="/assets/images/admin/db.jpg">
+        <h1 style="color:black" (click)="admindashboard()"> <i style="font-size:x-large;"
+                class="bi bi-house-door-fill"></i>&nbsp;&nbsp;Home </h1><br>
+        <h1 style="background-color:rgb(183, 183, 221);" (click)="staffregister()" ><i style="font-size:x-large;"
+                class="bi bi-person-fill-add"></i>&nbsp;&nbsp; Staff</h1><br>
+        <h1 style="background-color:rgb(183, 183, 221);"><i style="font-size:x-large;"
+                class="bi bi-bar-chart-line-fill"></i>&nbsp;&nbsp;product-details</h1><br>
+        <h1 style="background-color:rgb(183, 183, 221);" > <i style="font-size:x-large;"
+            class="bi bi-bank2"></i>&nbsp;&nbsp;about</h1><br>
+</div>
+<div class="bright">
+    <div class="container">
+       
+        <div class="right"><br>
+<h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  !important; font-size: 4vh;">Staff details</h1>
+            <div class="table-container" >
+                <table>
+                    <thead>
+                        <tr>
+                            <th>name</th>
+ 
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody style="margin-top: 15px;" *ngFor="let employee of returnArray">
+                    
+                        <td>{{employee.name}}</td> -->
+                        <!-- <td>{{employee.Phone}}</td> -->
+                        
+                        <!-- <td><button style="font-size: 4vh; background: none ; border: none; color: #1442e9;"> -->
+                                <!-- (click)="toggleDialog(employee);  editAction(employee);" -->
+                                <!-- <i style="font-size: 30px;" class="bi bi-person-badge"></i>
+                            </button>
+                        </td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+    </div>
+  
+
+
+</div> -->
+
+
+<!-- <p>staffdashboard works!</p>
+<button (click)="logout()">logout</button> -->
+
+<!-- <div *ngIf="showsplash" class="splashbackground" > -->
+
+    <!-- <div   class="splashbody">
+    <div   (touchstart)="handleButtonTouchUp()"  id="hand">
+    <img  src="/assets/images/hand2.png" alt="">
+    </div>
+    </div> -->
+    
+    <!-- </div>  -->
+    
+    
+    <div class="background" >
+        <div class="container">
+            <div class="header">
+                <div class="navs">
+                    <div class="nave">   
+                                     <input type="checkbox" id="menu">
+                    <label for="menu" class="icon">
+                            <div class="menu"></div>
+                     </label>
+                    
+                    <nav>
+                        <ul>
+                            <!-- <li>
+                                <i id="li" class="bi bi-house-fill"></i>Grade E
+                            </li> -->
+                            <li>
+                                <i (click)="staffregister()"  id="li" class="bi bi-bag-plus-fill">&nbsp;&nbsp;staff_Registration</i>
+                            </li>
+                            <li>
+                                <i (click)="staffupdation()" id="li" class="bi bi-building-add">&nbsp;&nbsp;Product_Updation</i>
+                            </li>
+                            <li>
+                                <i  id="li" class="bi bi-bar-chart">&nbsp;&nbsp;Analysis</i> 
+                            </li>
+                            <li>
+                                <i id="li" class="bi bi-truck">&nbsp;&nbsp;Delivery</i> 
+                            </li>
+                          
+                        </ul>
+                    </nav>
+                </div>
+    
+                    <!-- <div> <img src="/assets/images/foodlogo.png" alt=""></div> -->
+                    <div> <i (click)="profile()" id="profilelogo" class="bi bi-person-circle"></i>
+                    <div class="profilebackground" *ngIf="profileopen">
+    <div class="profilebody">
+        <div class="cancel">
+      <i (click)="profile()"  class="bi bi-x"></i>
+    </div>
+    
+        <div  id="logo">
+            <div id="logoborder">
+        <i  id="logoavg"  class="bi bi-person-fill"></i>
+            </div>
+    
+    </div>
+    <!-- <div id="listborder" *ngFor="let staffData of staffDatas" > -->
+    
+        <!-- <p id="name">{{staffData.Name}}</p>
+        <p id="name">ID:{{staffData.SID}}</p>
+        <p id="name">Section:{{staffData.Section}}</p> -->
+    
+    <!-- </div> -->
+    <button id="logout" (click)="logout()">logout</button> 
+    <h1>hai</h1>
+    
+    </div>
+                    </div>
+                    
+                    
+                    </div>
+                </div>
+                <!-- <div class="search">
+                    <div><i class="bi bi-search"></i>
+                      
+                                <input     type="text" placeholder="    Search" >
+                    </div>
+    
+                 
+    
+                </div> -->
+                
+                <div class="headerpopup">
+    <!-- <div>
+    <p>Top Recipes</p>
+    </div>
+    <div class="headerpopbody">
+    <div class="box">
+    <div id="img">
+    <img src="/assets/images/veg.jpg" alt="">
+    </div>
+    <div>
+    <p> veg</p>
+    </div>
+    
+    </div>
+    <div class="box">
+        <div id="img">
+            <img src="/assets/images/nonveg.jpg" alt="">
+            </div>
+            <div>
+                <p> Non-Veg</p>
+                </div>
+    
+    </div>
+    
+    </div>
+    
+    <div class="headerpopbody">
+    
+    <div class="box">
+        <div id="img">
+            <img src="/assets/images/noodel.jpg" alt="">
+            </div>
+            <div>
+                <p> Noodels</p>
+                </div>
+    
+    </div> -->
+    <!-- <div class="box">
+        <div id="img">
+            <img src="/assets/images/icecream.jpg"  alt="">
+            </div>
+            <div>
+                <p> Ice creams</p>
+                </div>
+    
+    </div> -->
+    <!-- </div> -->
+    
+      </div>
+    
+                </div>
+    
+    
+    
+            </div>
+            <!-- //
+            <div class="body">
+    
+    <div class="cheffimage">
+    
+    
+    <img src="/assets/images/chef.png" alt="">
+    
+        
+    
+             <div class="bodycontent">
+    <div id="product">
+                <div class="productimg">
+                    <i class="bi bi-bag-plus-fill"></i>
+                </div>
+                <div class="productdetails">
+    <p (click)="showPopup1()">Add<br> Product</p>
+    <div class="popup1" *ngIf="isPopupVisible1">Click menu!</div>
+    
+                </div>
+            </div>
+        <div id="product">
+                <div class="productimg">
+                    <i class="bi bi-building-add"></i>
+    
+                    
+                </div>
+                <div class="productdetails">
+    <p (click)="showPopup2()">Add restaurant</p>
+    <div class="popup2" *ngIf="isPopupVisible2">Click menu!</div>
+    
+                </div>
+                </div>
+                <div id="product">
+                    <div class="productimg">
+                        <i class="bi bi-bar-chart"></i>
+                        
+                    </div>
+                    <div class="productdetails">
+                        <p (click)="showPopup3()">Analysis</p>
+    <div class="popup3" *ngIf="isPopupVisible3">Click menu!</div>
+    
+                    </div>
+    
+                    </div>
+                    <div id="product">
+                        <div class="productimg">
+            
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <div class="productdetails">
+    <p (click)="showPopup4()">Delivary</p>
+    <div class="popup4" *ngIf="isPopupVisible4">Click menu!</div>
+    
+    
+                        </div>
+                        
+                        </div>
+    
+    
+             </div>
+            
+    
+    </div>
+    
+    
+    
+        </div> -->
+        <div class="footer">
+            <p style="color: wheat;font-size: 1.3vh;">clothingboutiques@gmail.com</p>
+            </div>
+        </div>
+    
+        
+    

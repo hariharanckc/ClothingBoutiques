@@ -1,0 +1,290 @@
+<!-- <p>productregistration works!</p>
+<button (click)="logout()">logout</button> -->
+<!-- <p>staffdashboard works!</p>
+<button (click)="logout()">logout</button> -->
+
+<!-- <div *ngIf="showsplash" class="splashbackground" > -->
+
+    <!-- <div   class="splashbody">
+    <div   (touchstart)="handleButtonTouchUp()"  id="hand">
+    <img  src="/assets/images/hand2.png" alt="">
+    </div>
+    </div> -->
+    
+    <!-- </div>  -->
+    
+    
+    <div class="background" >
+        <div class="container">
+            <div class="header">
+                <div class="navs">
+                    <div class="nave">   
+                                     <input type="checkbox" id="menu">
+                    <label for="menu" class="icon">
+                            <div class="menu"></div>
+                     </label>
+                    
+                    <nav>
+                        <ul>
+                            <!-- <li>
+                                <i id="li" class="bi bi-house-fill"></i>Grade E
+                            </li> -->
+                            <li>
+                                <i (click)="Home()" id="li" class="bi bi-bag-plus-fill">&nbsp;&nbsp;Home</i>
+                            </li>
+                            <li>
+                                <i (click)="productupdation()" id="li" class="bi bi-building-add">&nbsp;&nbsp;Product_Updation</i>
+                            </li>
+                            <li>
+                                <i  id="li" class="bi bi-bar-chart">&nbsp;&nbsp;Analysis</i> 
+                            </li>
+                            <li>
+                                <i id="li" class="bi bi-truck">&nbsp;&nbsp;Delivery</i> 
+                            </li>
+                          
+                        </ul>
+                    </nav>
+                </div>
+    
+                    <!-- <div> <img src="/assets/images/foodlogo.png" alt=""></div> -->
+                    <div> <i (click)="profile()" id="profilelogo" class="bi bi-person-circle"></i>
+                    <div class="profilebackground" *ngIf="profileopen">
+    <div class="profilebody">
+        <div class="cancel">
+      <i (click)="profile()"  class="bi bi-x"></i>
+    </div>
+    
+        <div  id="logo">
+            <div id="logoborder">
+        <i  id="logoavg"  class="bi bi-person-fill"></i>
+            </div>
+    
+    </div>
+    <!-- <div id="listborder" *ngFor="let staffData of staffDatas" >
+    
+        <p id="name">{{staffData.Name}}</p>
+        <p id="name">ID:{{staffData.SID}}</p>
+        <p id="name">Section:{{staffData.Section}}</p>
+    
+    </div> -->
+    <!-- <button id="logout" (click)="logout()">logout</button>  -->
+    
+    
+    </div>
+                    </div>
+                    
+                    
+                    </div>
+                </div>
+                <!-- <div class="search">
+                    <div><i class="bi bi-search"></i>
+                      
+                                <input     type="text" placeholder="    Search" >
+                    </div>
+    
+                 
+    
+                </div> -->
+                
+                <div class="headerpopup">
+                    <div class="headerbody">
+                    <form action="" [formGroup]="productcreation">
+
+                        <div  class="formleft" >
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <label > ImageUrl </label> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input  placeholder="imageURL" formControlName="imageURL" name="imageURL">
+                     
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <label > ProductName </label> 
+                            <div  style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+                            <input type="text" placeholder="productname" formControlName="Pname" name="Pname">
+                            <div id="errorcolor" *ngIf="productcreation.get('Pname')?.invalid && (productcreation.get('Pname')?.dirty || productcreation.get('Pname')?.touched)">
+                                <div *ngIf="productcreation.get('Pname')?.errors?.['required']">Name is required.</div>
+                                <div *ngIf="productcreation.get('Pname')?.errors?.['minlength']">Name must be at least 2 characters long.</div>
+                                <div *ngIf="productcreation.get('Pname')?.errors?.['maxlength']">Name cannot exceed 50 characters.</div>
+                                <div *ngIf="productcreation.get('Pname')?.errors?.['pattern']">Invalid characters in name.</div>
+                                
+                            </div>
+                        </div>
+                        </div>
+                            <div class="formright">
+                            <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+                                
+                             <div>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label > OriginalPrice </label>&nbsp;&nbsp;
+                            <input  type="number" placeholder="originalprice" formControlName="OriginalPrice"  name="OriginalPrice">
+                            <div id="errorcolor" style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-left: 10svw;"  *ngIf="productcreation.get('OriginalPrice')?.invalid && productcreation.get('OriginalPrice')?.touched">
+                                <div id="snumber" *ngIf="productcreation.get('OriginalPrice')?.errors?.hasOwnProperty('required')">
+                                    OriginalPrice is required.
+                                </div>
+                                <div id="snumber" *ngIf="productcreation.get('OriginalPrice')?.errors?.hasOwnProperty('pattern')">
+                                  Please enter a valid OriginalPrice.
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label > Offer </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div style="display: flex;align-items: center;justify-content: center;flex-direction: column; ">
+
+                            <input type="number"  placeholder="offer" formControlName="Offer" name="Offer">
+                            <div id="errorcolor" *ngIf="productcreation.get('Offer')?.invalid && productcreation.get('Offer')?.touched">
+                                <div id="snumber" *ngIf="productcreation.get('Offer')?.errors?.hasOwnProperty('required')">
+                                    Offer is required.
+                                </div>
+                                <div id="snumber" *ngIf="productcreation.get('Offer')?.errors?.hasOwnProperty('pattern')">
+                                  Please enter a valid Offer
+                                </div>
+                              </div>
+                              </div>
+                        </div>
+                        <div class="lastform">
+                        <label > Stock </label>
+                        <div style="display: flex;align-items: center;justify-content: center;flex-direction: column; ">
+
+                            <input type="number"  placeholder="stock" formControlName="Stock" name="Stock">
+                            <div id="errorcolor" *ngIf="productcreation.get('Stock')?.invalid && productcreation.get('Stock')?.touched">
+                                <div id="snumber" *ngIf="productcreation.get('Stock')?.errors?.hasOwnProperty('required')">
+                                    Stock is required.
+                                </div>
+                                <div id="snumber" *ngIf="productcreation.get('Stock')?.errors?.hasOwnProperty('pattern')">
+                                  Please enter a valid Stock.
+                                </div>
+                              </div></div>
+                        </div>
+                        <!-- <div *ngFor="let p of staffproductlist"> -->
+                            <!-- <h1>{{p.imageURL}}</h1> -->
+                            <!-- <h1>{{p.Pname}}</h1>
+                            <img [src]="p.imageURL" alt="">
+                        </div> -->
+<button [disabled]="!productcreation.valid" (click)="validation()"  >Add</button>
+                    </form>
+                </div>
+         
+    <!-- <div>
+    <p>Top Recipes</p>
+    </div>
+    <div class="headerpopbody">
+    <div class="box">
+    <div id="img">
+    <img src="/assets/images/veg.jpg" alt="">
+    </div>
+    <div>
+    <p> veg</p>
+    </div>
+    
+    </div>
+    <div class="box">
+        <div id="img">
+            <img src="/assets/images/nonveg.jpg" alt="">
+            </div>
+            <div>
+                <p> Non-Veg</p>
+                </div>
+    
+    </div>
+    
+    </div>
+    
+    <div class="headerpopbody">
+    
+    <div class="box">
+        <div id="img">
+            <img src="/assets/images/noodel.jpg" alt="">
+            </div>
+            <div>
+                <p> Noodels</p>
+                </div>
+    
+    </div> -->
+    <!-- <div class="box">
+        <div id="img">
+            <img src="/assets/images/icecream.jpg"  alt="">
+            </div>
+            <div>
+                <p> Ice creams</p>
+                </div>
+    
+    </div> -->
+    <!-- </div> -->
+    
+      </div>
+    
+                </div>
+    
+    
+    
+            </div>
+            <!-- //
+            <div class="body">
+    
+    <div class="cheffimage">
+    
+    
+    <img src="/assets/images/chef.png" alt="">
+    
+        
+    
+             <div class="bodycontent">
+    <div id="product">
+                <div class="productimg">
+                    <i class="bi bi-bag-plus-fill"></i>
+                </div>
+                <div class="productdetails">
+    <p (click)="showPopup1()">Add<br> Product</p>
+    <div class="popup1" *ngIf="isPopupVisible1">Click menu!</div>
+    
+                </div>
+            </div>
+        <div id="product">
+                <div class="productimg">
+                    <i class="bi bi-building-add"></i>
+    
+                    
+                </div>
+                <div class="productdetails">
+    <p (click)="showPopup2()">Add restaurant</p>
+    <div class="popup2" *ngIf="isPopupVisible2">Click menu!</div>
+    
+                </div>
+                </div>
+                <div id="product">
+                    <div class="productimg">
+                        <i class="bi bi-bar-chart"></i>
+                        
+                    </div>
+                    <div class="productdetails">
+                        <p (click)="showPopup3()">Analysis</p>
+    <div class="popup3" *ngIf="isPopupVisible3">Click menu!</div>
+    
+                    </div>
+    
+                    </div>
+                    <div id="product">
+                        <div class="productimg">
+            
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <div class="productdetails">
+    <p (click)="showPopup4()">Delivary</p>
+    <div class="popup4" *ngIf="isPopupVisible4">Click menu!</div>
+    
+    
+                        </div>
+                        
+                        </div>
+    
+    
+             </div>
+            
+    
+    </div>
+    
+    
+    
+        </div> -->
+        <div class="footer">
+            <p style="color: wheat;font-size: 1.3vh;">clothingboutiques@gmail.com</p>
+            </div>
+        </div>
+    
+        
+    

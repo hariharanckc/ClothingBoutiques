@@ -1,0 +1,242 @@
+.container{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*mobile view*/
+.header{
+    /* background-color: red; */
+    height: 20vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.header img{
+    height: 50vh;
+    width: 120%;
+    position: absolute;
+    top: -30vh;
+
+}
+.body{
+    /* background-color: red; */
+    height: 80vh;
+    width: 100% ;
+    flex-direction: column;
+    display: flex;
+}
+.body .bhead{
+    background-color: white;
+    height: 25vh;
+    width: 100%;
+    position: relative;
+    /* overflow: hidden; */
+    display: flex;
+justify-content: center;
+}
+.bhead img{
+    height: 53vh;
+    width:55%;
+    position: absolute;
+    top: 1.5vh;
+}
+.form{
+/* background-color: yellow; */
+background-color: transparent;
+
+height: 63vh;
+position: relative;
+overflow: hidden;
+
+
+}
+
+.form img{
+    position: absolute;
+    height: 35vh;
+    width: 55%;
+    border-radius: 50%;
+    right: -8vh;
+    bottom: -9vh;
+
+}
+.form form{
+    /* position: absolute; */
+    /* background-color: red; */
+    height:60vh ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6vh;
+
+    /* justify-content: center; */
+    
+}
+
+.form form #input
+{
+
+    width: 80%;
+height: 2vh;
+margin: 2.5vh;
+padding: 17px 0px;
+font-size: 18px;
+/* background: transparent; */
+border: none;
+outline:none;
+align-items: center;
+display: flex;
+border-radius: 1vh;
+/* border: 0.2vh solid #66a9e0; */
+/* border-top: transparent;
+border-left: transparent;
+border-right: transparent; */
+/* background-color: red; */
+right: -3vh;
+box-shadow:
+   5px 5px 10px rgba(0, 0, 0, 0.2),
+  5px 5px 10px rgba(0, 0, 0, 0.2);
+text-align: center;
+  /* align-items: ce; */
+  /* top: 5vh; */
+
+
+}
+
+
+form p{
+    padding: 3vh;
+    margin-inline-end: -48%;
+    font-size: 13px;
+}
+
+form button{
+    margin-block-start: 4vh;
+}
+button{
+    padding: 2vh;
+    width: 35%;
+border-radius: 2.5vh;
+border: transparent;
+    /* border: 0.2vh solid #66a9e0; */
+box-shadow:
+  inset 5px 5px 10px rgba(118, 113, 113, 0.146),
+  5px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+
+}
+
+@keyframes buttonTransform {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#button {
+    animation: buttonTransform 1s infinite;
+    outline: none;
+
+    /* z-index: -1; */
+}
+
+/*lapview*/
+
+@media only screen and (min-width: 769px){
+
+
+.header{
+    /* background-color: red; */
+    height: 40vh;
+    width: 100%;
+
+}
+.header img{
+    height: 55vh;
+    width: 85%;
+    position: absolute;
+    top: -30vh;
+
+}
+.body{
+    /* background-color: rgb(14, 7, 7); */
+    height: 95vh;
+    width: 100% ;
+    flex-direction: column;
+    display: flex;
+}
+.body .bhead{
+    /* background-color: rgb(222, 70, 70); */
+    height: 20vh;
+    width: 100%;
+
+}
+.bhead img{
+    height: 68vh;
+    width:35%;
+    position: absolute;
+    top: -4.5vh;
+}
+.form{
+/* background-color: yellow; */
+background-color: transparent;
+height: 83vh;
+position: relative;
+overflow: hidden;
+top: 10vh;
+
+}
+
+.form img{
+    position: absolute;
+    height: 45vh;
+    width: 39%;
+    border-radius: 50%;
+    right: -20vh;
+    bottom: -14vh;
+
+}
+
+.form form #input
+{
+
+width: 40%;
+height: 2vh;
+}
+form p{
+    padding: 3vh;
+    margin-inline-end: -30%;
+}
+button
+{
+    padding: 2vh;
+    width: 25%;
+}
+
+
+}
+
+@media only screen and (min-width: 420px) and (max-width: 767px){
+    .form img{
+        position: absolute;
+        height: 45vh;
+        width: 39%;
+        border-radius: 50%;
+        right: -15vh;
+        bottom: -14vh;
+    
+    }
+}

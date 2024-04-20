@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="header" >
+      
+          <h1>Admin login</h1>
+          <!-- <div >
+          <video   src=""  id="myVideo"  style="height:25vh;width: 20vw; border-radius: 59%;" autoplay></video> 
+<div  class="errorMessage"></div> -->
+<!-- <div id="canvacontainer" ></div> -->
+        <!-- </div> -->
+    </div>
+
+       <div  class="body" >
+
+
+            <form [formGroup]="adminlogin" action="" id="login" >
+              
+        <div class="input"   [style.border]="showErrorinvalid ? '0.3vh solid red':  '0.3vh solid transparent'"   [style.border]="showErroradminId ? '0.3vh solid red':  '0.3vh solid transparent'" >
+
+    <input type="text" id="login-admin" formControlName="adminId"  autocomplete="off" required    >
+    <label for="">Admin-id  </label>
+    <div  *ngIf="adminlogin.get('adminId')?.invalid && adminlogin.get('adminId')?.touched">
+        <div id="errorcolor" *ngIf="adminlogin.get('adminId')?.errors?.hasOwnProperty('required')">
+           * adminID is required.
+        </div>
+        <div id="errorcolor" *ngIf="adminlogin.get('adminId')?.errors?.hasOwnProperty('pattern')">
+            Please enter a valid adminID (letters and spaces only).
+        </div>
+    </div>
+</div>
+<div id="eyeparent"  class="input" [style.border]="showErrorinvalid ? '0.3vh solid red':  '0.3vh solid transparent'"     [style.border]="showErrorpassword ? '0.3vh solid red':  '0.3vh solid transparent'"  >
+    
+    <input type="{{ showon ? 'text' : 'password' }}" type="password" id="login-pwd" formControlName="adminpassword"   autocomplete="off" required >
+    <label for="">password </label>
+  
+    <div id="eyechild">
+          <svg (click)="eye()" *ngIf="showon; else showblock" id="svg"  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="gray" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+            <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+            <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+          </svg>
+<ng-template #showblock>
+    <svg (click)="eye()"    xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="gray"  class="bi bi-eye-fill" viewBox="0 0 16 16">
+        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+      </svg>
+
+</ng-template>
+    </div>
+   
+  
+</div>
+<div *ngIf="adminlogin.get('adminpassword')?.errors && adminlogin.get('adminpassword')?.touched">
+    <div id="errorcolor" *ngIf="adminlogin.get('adminpassword')?.hasError('required')">Password is required.</div>
+    <div id="errorcolor" *ngIf="adminlogin.get('adminpassword')?.hasError('minlength')">Password must be at least 8 characters long.</div>
+    <div id="errorcolor" *ngIf="adminlogin.get('adminpassword')?.hasError('invalidPassword')">Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.</div>
+  </div>
+<!-- <p>{{showErroradminId}}</p>
+<p>{{showErrorpassword}}</p>
+<p>{{showErrorinvalid}}</p> -->
+<p>{{showError}}</p>
+
+
+<div class="button">
+        <button   (click)="onSubmit()"   id="button">Login</button>
+</div>
+
+</form>
+
+
+    
+       </div>
+    
+
+    
+    </div>

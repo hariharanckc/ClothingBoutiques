@@ -1,0 +1,32 @@
+<div *ngIf="showSplash" class="splash-container ">
+  <div class="pop-element">
+    <img src="/assets/images/logodress.jpg">
+  </div>
+</div>
+<div class="loginworks" *ngIf="!showSplash">
+  <div class="button">
+    <button (click)="loginoptions()">login</button>
+  </div>
+</div>
+
+
+
+<div class="options" *ngIf="optionopen">
+  <div class="optionbody">
+    <div class="optionlogo">
+      <img src="assets\images\mainlogo.png" alt="">
+    </div>
+    <div class="loginbody">
+      <div class="logins">
+        <button routerLink="/adminlogin">admin Login</button>
+      </div>
+      <div class="logins">
+        <button routerLink="/stafflogin">staff Login</button>
+      </div>
+      <div class="logins">
+        <button routerLink="/userlogin">user Login</button>
+      </div>
+    </div>
+  </div>
+  <i (click)="loginoptions()" class="bi bi-x"></i>
+</div>

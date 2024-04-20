@@ -1,0 +1,210 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    height:40vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.header svg{
+    margin-top: 5vh;
+}
+
+.body{
+    height: 50vh;
+    width:100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:35%;
+
+padding: 10px;
+
+}
+form{
+    width: 80%;
+margin: 10px;
+padding: 25px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.body .input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+margin: 20px;
+    box-shadow: 5px 5px 10px #00000065, -10px -10px 10px #fff;
+    /* background-color: red; */
+}
+
+.body .input input{
+width: 90%;
+height: 2vh;
+padding: 20px 0px;
+font-size: 15px;
+background: transparent;
+border: none;
+outline:none;
+align-items: center;
+display: flex;
+margin-left: 7%;
+/* background-color: red; */
+
+
+
+/* border-bottom: 1px solid gray; */
+
+
+}
+/* #login-pwd{
+margin-bottom: 3vh;
+} */
+
+.body .input label{
+    position: absolute;
+    color: black;
+    top: 34%;
+    left:7%;
+    font-size: 17px;
+    pointer-events:none;
+    transition: 0.5s;
+    font-family: gotham !important;
+
+}
+
+
+.body .input input:focus ~ label ,
+.body .input input:valid ~ label{
+
+    top:0.3vh;
+    left: 2%;
+    color: black;
+    font-size: 13px;
+}
+
+
+
+p{
+    color: red;
+}
+
+#eyeparent{
+    position: relative;
+    display: flex;
+    top: 1vh;
+}
+
+#eyechild
+{
+    position: absolute;
+    right:7%;
+    bottom: 1vh;
+}
+
+.error1{
+    color: red;
+}
+/* #input{
+    width: 80%;
+    padding: 25px;
+    margin: 15px;    
+    font-size: 20px;
+    border-radius: 2px;
+    border: none;
+    
+    border-bottom:4px solid rgb(232, 217, 217);
+    border-right:4px solid rgb(232, 217, 217);
+    text-decoration: none;
+    border-color: #bab1b1;
+}
+#input::placeholder{
+    font-weight: 300;
+} */
+
+
+.button{
+    width: 100%;
+    height: 13vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#button{
+    margin-top: 3vh;
+    background-color: rgb(134, 226, 231);
+    box-shadow: 5px 5px 10px #00000065, -10px -10px 10px #fff;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 90%;
+    font-size: 20px;
+}
+
+
+
+/* #input {
+    border: transparent;
+    border-bottom: 3px dotted rgb(232, 217, 217);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 2px;
+    text-decoration: none;
+    margin: 10px;
+    margin-left: 6%;
+    width: 80%;
+} */
+
+.footer{
+    height: 10vh;
+    width:90%;
+    background-color: green;
+}
+
+.errormessage{
+    border-radius: 50vh;
+}
+
+#errorcolor{
+    color: red;
+    font-size: 2vh;
+    font-weight: 200;
+    text-transform: capitalize;
+    margin-left: 1svw;
+
+    width: 30svw;
+}
+
+@media only screen and (min-width: 769px){
+    
+    
+    .body .input {
+        position: relative;
+        width: 35%;
+        height: 40px;
+ 
+    }
+    
+
+    .button{
+        width: 30%;
+
+    }
+        
+}
+
+
