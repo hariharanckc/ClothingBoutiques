@@ -18,7 +18,7 @@ import { ProductregistrationComponent } from './component/staffs/productregistra
 import { SIDtrailComponent } from './component/sidtrail/sidtrail.component';
 import { ProductupdationComponent } from './component/staffs/productupdation/productupdation.component';
 import { StaffupdationComponent } from './component/admin/staffupdation/staffupdation.component';
-import { SlikgridComponent } from './component/slikgrid/slikgrid.component';
+// import { SlikgridComponent } from './component/slikgrid/slikgrid.component';
 import { AngularSlickgridModule } from 'angular-slickgrid';
 import { SlikComponent } from './component/slik/slik.component';
 @NgModule({
@@ -40,7 +40,7 @@ import { SlikComponent } from './component/slik/slik.component';
     SIDtrailComponent,
     ProductupdationComponent,
     StaffupdationComponent,
-    SlikgridComponent,
+    // SlikgridComponent,
     SlikComponent,
     
     // StaffregisterComponent

@@ -34,6 +34,7 @@ padding: 10px;
 
 }
 form{
+    
     width: 80%;
 margin: 10px;
 padding: 25px;
@@ -43,10 +44,12 @@ align-items: center;
 }
 
 .body .input {
+    /* background-color: yellow; */
     position: relative;
     width: 100%;
     height: 50px;
 margin: 20px;
+padding: 2vh;
     box-shadow: 5px 5px 10px #00000065, -10px -10px 10px #fff;
     /* background-color: red; */
 }
@@ -77,7 +80,7 @@ margin-bottom: 3vh;
 .body .input label{
     position: absolute;
     color: black;
-    top: 34%;
+    top: 36%;
     left:7%;
     font-size: 17px;
     pointer-events:none;
@@ -90,7 +93,7 @@ margin-bottom: 3vh;
 .body .input input:focus ~ label ,
 .body .input input:valid ~ label{
 
-    top:0.3vh;
+    top:0.1vh;
     left: 2%;
     color: black;
     font-size: 13px;
@@ -181,14 +184,29 @@ p{
 
 #errorcolor{
     color: red;
-    font-size: 2vh;
+    font-size: 1.5vh;
     font-weight: 200;
     text-transform: capitalize;
     margin-left: 1svw;
 
     width: 30svw;
 }
-
+#errorpassword{
+    color: red;
+    font-size: 1.5vh;
+    font-weight: 200;
+    text-transform: capitalize;
+    margin-left: 10svw;
+    width: 30svw;
+}
+#errorpassword1{
+    color: red;
+    font-size: 1.5vh;
+    font-weight: 200;
+    text-transform: capitalize;
+    /* margin-left: 10svw; */
+    width: 20svw;
+}
 @media only screen and (min-width: 769px){
     
     

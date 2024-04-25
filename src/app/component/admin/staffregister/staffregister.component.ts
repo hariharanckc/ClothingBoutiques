@@ -27,13 +27,15 @@ export class StaffregisterComponent implements OnInit {
   Ssalary!: number;
   Gender: string = ''; // Initialize Gender to an empty string
   Section!: string;
-  LastSID: string = "";
+  // LastSID: string = "";
   returnArray: any;
   SID: string = "";
-  sidFromAdmin: any
+  // sidFromAdmin: any
   showerror: string = "";
   placeholder1: string | any = "Secect Branch ▼";
   nextSID!: string;
+  sid: any;
+  SIDs: string = '';
 
 
 
@@ -52,13 +54,14 @@ export class StaffregisterComponent implements OnInit {
       Snumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       Ssalary: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       Date: [''],
-      //  SID: [],
+       SID: [],
       Gender: ['', Validators.required],
       Section: ['', Validators.required],
       // lastSID: [],
 
 
     });
+    this.getRecentDetails();
     this.read();
     console.log(this.read());
 
@@ -73,7 +76,8 @@ export class StaffregisterComponent implements OnInit {
   submit(recentData: IRecentData) {
     //this.ngOnDestroy();
 
-    console.log(this.sidFromAdmin)
+    // console.log(this.sidFromAdmin)
+    
     this.createEmployeeForm.value.Date = this.formattedDate;
     if (this.createEmployeeForm && this.createEmployeeForm.valid) {
       console.log('Form submitted:', this.createEmployeeForm.value);
@@ -95,10 +99,13 @@ export class StaffregisterComponent implements OnInit {
       this.adminService.create(couchstructure).subscribe(res => {
         console.log(res);
         this.resetFormFields();
+        this.getRecentDetails();
+
+    this.read();
+
       })
 
     }
-    this.read();
 
   }
   validation() {
@@ -133,6 +140,8 @@ export class StaffregisterComponent implements OnInit {
         const nextID = date[0].value.data.ID + 1;
         response.ID = nextID;
         response.SID = "SID" + nextID.toString().padStart(4, '0');
+        this.SIDs = response.SID
+        
       }
       this.submit(response);
     })

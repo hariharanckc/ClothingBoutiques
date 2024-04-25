@@ -49,9 +49,9 @@
   
 </div>
 <div *ngIf="adminlogin.get('adminpassword')?.errors && adminlogin.get('adminpassword')?.touched">
-    <div id="errorcolor" *ngIf="adminlogin.get('adminpassword')?.hasError('required')">Password is required.</div>
-    <div id="errorcolor" *ngIf="adminlogin.get('adminpassword')?.hasError('minlength')">Password must be at least 8 characters long.</div>
-    <div id="errorcolor" *ngIf="adminlogin.get('adminpassword')?.hasError('invalidPassword')">Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.</div>
+    <div id="errorpassword" *ngIf="adminlogin.get('adminpassword')?.hasError('required')">* Password is required.</div>
+    <div id="errorpassword" *ngIf="adminlogin.get('adminpassword')?.hasError('minlength')">* Password must be at least 8 characters long.</div>
+    <div id="errorpassword"  *ngIf="adminlogin.get('adminpassword')?.hasError('invalidPassword')">* Password must contain at least one uppercase letter, one <br>  lowercase letter, one number, and one special character.</div>
   </div>
 <!-- <p>{{showErroradminId}}</p>
 <p>{{showErrorpassword}}</p>
@@ -60,7 +60,7 @@
 
 
 <div class="button">
-        <button   (click)="onSubmit()"   id="button">Login</button>
+        <button     (click)="onSubmit()"   id="button">Login</button>
 </div>
 
 </form>

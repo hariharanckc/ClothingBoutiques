@@ -20,8 +20,7 @@ export class AdminloginComponent implements OnInit {
 
   scan:boolean=false;
 
-  // adminId: string="";
-  // password: string="";
+  
 
   showErroradminId: boolean = false;
   showErrorpassword: boolean = false;
@@ -45,14 +44,14 @@ adminlogin!:FormGroup
       adminpassword:['',[
         Validators.required,
         Validators.minLength(8),
-      ], 
-      this.customPasswordValidator
+      
+      this.customPasswordValidator]
     ]
     })
-    this.title.setTitle('adminlogin');
-    if (localStorage.getItem('admin')) {
-      this.router.navigateByUrl('/admindashboard');
-    }
+    // this.title.setTitle('adminlogin');
+    // if (localStorage.getItem('admin')) {
+    //   this.router.navigateByUrl('/admindashboard');
+    // }
   }
 
 
@@ -72,78 +71,82 @@ eye(){
 
   onSubmit() {
 
-    if(this.adminlogin && this.adminlogin.valid){
-console.log(this.adminlogin.value.adminId);
+//     if(this.adminlogin && this.adminlogin.valid){
+// console.log(this.adminlogin.value.adminId);
 
-    }
-    // this.validation();
+//     }
+    this.validation();
   
   }
 
 
-// validation(){
-//   if(this.adminlogin.value.adminId===""){
-//     console.log("enter adminlogin");
+validation(){
+  if(this.adminlogin.value.adminId === ""){
+    console.log("enter adminlogin");
     
-//   } else
-//   if(this.adminlogin.value.adminpassword===""){
-//     console.log("enter password"); 
-//   }
+  } else
+  if(this.adminlogin.value.adminpassword === ""){
+    console.log("enter password"); 
+  }else if(this.adminlogin.value.adminId && this.adminlogin.value.adminpassword){
+  // localStorage.setItem('admin', this.adminId);
+  this.router.navigateByUrl('/admindashboard');
+    // this.router.navigateByUrl("admindashboard")
+  }
+}
+
+//   validation(){
+//     this.showErroradminId=true;
+//     this.showErrorpassword=true;
+
+// if(this.adminId==="" && this.password===""){
+// this.showErroradminId=true;
+// this.showErrorpassword=true;
+// console.log("enter ID/password");
+// this.showError="enter ID/Password"
+// }else
+// if(this.adminId==="admin123" && this.password===""  ){
+//   this.showErroradminId=false;
+//   this.showError="enter password"
+// }
+// else if(this.adminId==="" && this.password==="admin"  ){
+//   this.showErrorpassword=false;
+//   this.showError="enter admin"
+// }else
+// if(this.adminId!=="admin123" && this.password=="admin"){
+// this.showError="Wrong ID"
+// this.showErrorpassword=false  
+// }else if(this.adminId=="admin123" && this.password!=="admin"){
+// this.showError="Wrong password"
+// this.showErroradminId=false  
+// }else 
+// if(this.adminId=="" && this.password!=="admin"){
+//   this.showErroradminId=false;
+//   this.showError="wrong password"
+// }else if(this.adminId!=="admin123" && this.password===""){
+//   this.showErrorpassword=false;
+//   this.showError="wrong ID"
+// }
+// else 
+
+// if(this.adminId!=="admin123" && this.password!=="admin") {
+//   this.showError="wrong ID/Password"
+// } else
+
+
+// if (this.adminId === "admin123" && this.password === "admin") {
+//   console.log(this.adminId);
+ 
+//   localStorage.setItem('admin', this.adminId);
+//   this.router.navigateByUrl('/admindashboard');
 // }
 
-  validation(){
-    this.showErroradminId=true;
-    this.showErrorpassword=true;
-
-if(this.adminId==="" && this.password===""){
-this.showErroradminId=true;
-this.showErrorpassword=true;
-console.log("enter ID/password");
-this.showError="enter ID/Password"
-}else
-if(this.adminId==="admin123" && this.password===""  ){
-  this.showErroradminId=false;
-  this.showError="enter password"
-}
-else if(this.adminId==="" && this.password==="admin"  ){
-  this.showErrorpassword=false;
-  this.showError="enter admin"
-}else
-if(this.adminId!=="admin123" && this.password=="admin"){
-this.showError="Wrong ID"
-this.showErrorpassword=false  
-}else if(this.adminId=="admin123" && this.password!=="admin"){
-this.showError="Wrong password"
-this.showErroradminId=false  
-}else 
-if(this.adminId=="" && this.password!=="admin"){
-  this.showErroradminId=false;
-  this.showError="wrong password"
-}else if(this.adminId!=="admin123" && this.password===""){
-  this.showErrorpassword=false;
-  this.showError="wrong ID"
-}
-else 
-
-if(this.adminId!=="admin123" && this.password!=="admin") {
-  this.showError="wrong ID/Password"
-} else
-
-
-if (this.adminId === "admin123" && this.password === "admin") {
-  console.log(this.adminId);
- 
-  localStorage.setItem('admin', this.adminId);
-  this.router.navigateByUrl('/admindashboard');
-}
-
     
-  }
-  cleardata(){
-    this.adminId="";
-    this.password="";
+//   }
+//   cleardata(){
+//     this.adminId="";
+//     this.password="";
 
-  }
+//   }
 
  
 

@@ -19,9 +19,9 @@ import { StaffupdationComponent } from './component/admin/staffupdation/staffupd
 import { SlikComponent } from './component/slik/slik.component';
 
 const routes: Routes = [
-{path:'dfs',component:MainComponent},
+// {path:'',component:MainComponent},
 // {path:'adminlogin',component:AdminloginComponent},
-{path:'admin',component:AdmindashboardComponent},
+{path:'',component:AdmindashboardComponent},
 {path:'staffregister',component:StaffregisterComponent},
 {path:'stafflogin',component:StaffloginComponent},
 {path:'userlogin',component:UserloginComponent},
@@ -32,7 +32,7 @@ const routes: Routes = [
 {path:"productregistration",component:ProductregistrationComponent},
 {path:"productupdation",component:ProductupdationComponent},
 {path:"staffupdation",component:StaffupdationComponent},
-{path:"",component:SlikComponent}
+{path:"slik",component:SlikComponent}
 ];
 
 @NgModule({

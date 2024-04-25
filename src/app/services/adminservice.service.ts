@@ -22,7 +22,6 @@ export class AdminserviceService {
   header={
     'Authorization':`Basic ${btoa(this.couchusername + ':' + this.couchpassword)}`
   };
-  public counter: number = 0;
 
  
 
@@ -75,6 +74,8 @@ delete(d:string,rev:string){
     })
 }
 
+
+
 updatstaffedit(_id:string,_rev:string,docs:any){
   const updat=`${this.couchdburl}/${this.databasename}/${_id}?rev=${_rev}`;
   return this.http.put(updat,docs,{
@@ -82,11 +83,7 @@ updatstaffedit(_id:string,_rev:string,docs:any){
   })
 }
 
-generateEmployeeId(initial:number): string {
-  this.counter+=1
-  console.log(this.counter,initial)
-  return 'SID' + (initial+this.counter).toString().padStart(3, '0');
-}
+
 
 
 
@@ -95,6 +92,21 @@ GetSID(){
   return this.http.get(read,{
     headers:this.header
   })
+}
+
+
+GetSearchPhone(startkey:any){
+  const read1=`${this.couchdburl}/${this.databasename}/_design/view/_view/StaffSearch?startkey="${startkey}"&endkey="${startkey}\ufff0"&inclusive_end=${true}`
+  return this.http.get(read1,{
+    headers:this.header
+  })
+}
+
+searchstaff(document:any){
+  const createurl=`${this.couchdburl}/${this.databasename}_design/ClothingBoutiques/_search/staff`;
+  return this.http.post(createurl,document ,{
+   headers:this.header
+  });
 }
 
 }

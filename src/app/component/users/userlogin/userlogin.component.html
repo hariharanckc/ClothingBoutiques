@@ -10,17 +10,13 @@
     <div class="body">
         <form>
             <div>
-                <input type="number"
-                    [style.border-bottom]="showErrorPhnNO ? '0.4vh dotted red' : '0.3vh dotted #66a9e0'"
-                    name="phoneNumber" [(ngModel)]="phoneNumber" [ngClass]="{'error1': showError}"
-                    [ngStyle]="{'color':  showErrorPhnNO  ? 'red' : 'black'}" placeholder="phoneNumber" id="input">
+                <input type="number" [style.border-bottom]="showErrorPhnNO ? '0.4vh dotted red' : '0.3vh dotted #66a9e0'" name="phoneNumber" [(ngModel)]="phoneNumber" [ngClass]="{'error1': showError}" [ngStyle]="{'color':  showErrorPhnNO  ? 'red' : 'black'}" placeholder="phoneNumber" id="input">
                 <div class="password">
                     <input type="password" type="{{ showeye ? 'text' : 'password' }}"
                         [style.border-bottom]="showError ? '0.4vh dotted red' : '0.3vh dotted #66a9e0'" name="password"
                         [(ngModel)]="password" [ngClass]="{'error1': showError}"
                         [ngStyle]="{'color':  showError  ? 'red' : 'black'}" placeholder="password" id="input">
-                    <svg (click)="eye()" [ngClass]="{'error2': showeye}"
-                        [ngStyle]="{'color':  showeye  ? 'gray' : 'black'}" *ngIf="showeye; else showblock" id="svg"
+                    <svg (click)="eye()" [ngClass]="{'error2': showeye}" [ngStyle]="{'color':  showeye  ? 'gray' : 'black'}" *ngIf="showeye; else showblock" id="svg"
                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor"
                         class="bi bi-eye-fill" viewBox="0 0 16 16">
                         <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />

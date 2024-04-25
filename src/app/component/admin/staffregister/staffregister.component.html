@@ -1,233 +1,5 @@
 <!-- <button (click)="logout()">logout</button> -->
-<!-- <div class="container">
-    <div class="header">
-        <div class="hleft">
-            <h2>ClothingBoutiques</h2>
-        </div>
-        <div class="hright">
-        </div>
-    </div>
-    <div class="body">
-        <div class="bleft">
-            <img src="/assets/images/admin/db.jpg">
-            <h1 style="background-color:rgb(183, 183, 221);"> <i style="font-size:x-large;"
-                    class="bi bi-house-door-fill" (click)="admindashboard()"></i>&nbsp;&nbsp; Home</h1><br>
-            <h1 style="color: black;" ><i style="font-size:x-large;"
-                    class="bi bi-person-fill-add"></i>&nbsp;&nbsp;staff</h1><br>
-            <h1 style="background-color:rgb(183, 183, 221);" ><i style="font-size:x-large;"
-                    class="bi bi-bar-chart-line-fill"></i>&nbsp;&nbsp;product-details</h1><br>
-            <h1 style="background-color:rgb(183, 183, 221);"><i style="font-size:x-large;"
-                    class="bi bi-bank2"></i>&nbsp;&nbsp;about</h1><br>
-        </div>
-        <div class="bright">
-            <h1 >Create New Staff</h1>
-<form [formGroup]="createEmployeeForm">
-    <div style=" width: 35vw;align-items: center;display: flex;justify-content: center;">
-        <input type="text" placeholder="Name" formControlName="Name" name="Name">
 
-
-        <input type="" [value]="formattedDate" readonly >
-    </div>   <div style=" width: 35vw;align-items: center;display: flex;justify-content: center;">
-        <input type="number" placeholder="Phonenumber" formControlName="Phonenumber" name="Phonenumber">
-
-        <input type="number" placeholder="Salary" formControlName="Salary" name="Salary" > -->
-        <!-- <input type="" [value]="formattedDate" formControlName="formattedDate" name="formattedDate"> -->
-    <!-- </div>
-    <div style=" width: 40vw;align-items: center;display: flex;justify-content: center;">
-        <input  [placeholder]="lastEID"  formControlName="employeeId" style="width: 13vw;margin-right: 2vw;" readonly>
-        <div style="display: flex;">
-            <label class="radio-label">
-                <input type="radio" name="Gender" [value]="'male'"  formControlName="Gender" > Male
-            </label>
-            <label class="radio-label">
-                <input type="radio" name="Gender" [value]="'female'" formControlName="Gender" > Female
-            </label>
-        </div>
-    </div>
-<div>
-    <select formControlName="Section"  name="Section">
-        <option value="" placeholder="select Branch" >Select Branch ▼</option>
-        <option *ngFor="let value of categories" [value]=value>{{value}}</option>
-        </select>
-    </div>
-
-
-<button  (click)="validation()" >Add</button>
-
-</form> -->
-
-
-<!-- 
-<form  >
-    <div style=" width: 35vw;align-items: center;display: flex;justify-content: center;">
-    <input type="text" placeholder="Name" [(ngModel)]="staffdata.Name" name="Name">
-    <input type="" [value]="formattedDate" [(ngModel)]="formattedDate" name="formattedDate">
-</div>
-
-<div style=" width: 35vw;align-items: center;display: flex;justify-content: center;">
-    <input type="number" placeholder="Phone"  [(ngModel)]="staffdata.Phonenumber" name="Phonenumber">
-    <input type="number" placeholder="salary"  [(ngModel)]="staffdata.Salary" name="Salary">
-</div>
-<div>
-    <input type="text" [placeholder]="employeeId" name="employeeId" [value]="employeeId"  readonly>
-
-    <div style="display: flex;">
-        <label class="radio-label">
-            <input type="radio" name="Gender" [value]="'male'"  [(ngModel)]="staffdata.Gender" > Male
-        </label>
-        <label class="radio-label">
-            <input type="radio" name="Gender" [value]="'female'" [(ngModel)]="staffdata.Gender" > Female
-        </label>
-    </div>
-  
-</div>
-<select [(ngModel)]="staffdata.Section" name="Section">
-<option value="">Select Branch ▼</option>
-<option *ngFor="let value of categories" [value]=value>{{value}}</option>
-</select>
-<div>
-
-</div>
-<button  (click)="submit()" >Add</button>
-</form>
- -->
-<!-- 
-    <form (ngSubmit)="onSubmit()" [formGroup]="createEmployeeForm">
-        <div class="" style=" width: 35vw;align-items: center;display: flex;justify-content: center;">
-        <input type="text" placeholder="Employee Name" name="Name" [(ngModel)]="Name" formControlName="Name">                         -->
-        <!-- <input type=""  readonly   value="{{ formattedDate}}" formControlName="{{ formattedDate}}"> -->
-        <!-- <input  type="date" readonly  style="padding-inline: 3vw;"> 
-
-    </div>
-        <div class="">
-            <input type="number" placeholder="Phone" name="Phone" [(ngModel)]="Phone" formControlName="Phone">
-            <input type="number" placeholder="salary" name="Salary" [(ngModel)]="Salary" formControlName="Salary">
-        </div>
-        <div class="" style="margin-right: 3%; display: flex;flex-direction: row;"> 
-            <div> -->
-                <!-- <input type="text" [placeholder]="lastEID" name="EID" [(ngModel)]="EID" [value]="lastEID"
-                formControlName="EID" >
-             </div>    -->
-                <!-- <input type="text" [placeholder]="employeeId" name="employeeId"  [value]="employeeId"  readonly>
-          </div> 
-            <div style="display: flex;">
-                <label class="radio-label">
-                    <input type="radio" name="Gender" [value]="'male'"  [(ngModel)]="Gender" formControlName="Gender"> Male
-                </label>
-                <label class="radio-label">
-                    <input type="radio" name="Gender" [value]="'female'" [(ngModel)]="Gender" formControlName="Gender"> Female
-                </label>
-            </div>
-        </div>
-        <div class="">
-            
-                <select [(ngModel)]="Section" name="Section"  formControlName="Section">
-                    <option value="">Select Branch ▼</option>
-                    <option *ngFor="let value of catergories" [value]=value>{{value}}</option> -->
-                    <!-- <option value="MENS">Mens-section</option>
-                    <option value="WOMENS">Womens-section</option>
-                    <option value="KIDS">kids-section</option> -->
-                <!-- </select>
-
-            
-        </div>
-    <P style="color: red;">{{showError}}</P> -->
-
-        <!-- <div> -->
-            <!-- <button style="background-color: rgb(255, 38, 0);" (click)="resetFormFields()">Reset</button> -->
-            <!-- <button  type="submit" >Add</button>
-
-        </div>
-        <div class="loading-spinner" *ngIf="isloading"></div>
-
-
-</form> -->
-
-<!-- 
-        </div>
-
-    
-
-</div>
-
-
-
- -->
-<!-- <button (click)="logout()">logout</button> -->
-<!-- <div class="container">
-
-    <div class="header">
-        <div class="hleft">
-            <h2>ClothingBoutiques</h2>
-        </div>
-        <div class="hright">
-        </div>
-    </div>
-
-    <div class="body">
-<div class="bleft">
-        <img src="/assets/images/admin/db.jpg">
-        <h1 style="color:black" (click)="admindashboard()"> <i style="font-size:x-large;"
-                class="bi bi-house-door-fill"></i>&nbsp;&nbsp;Home </h1><br>
-        <h1 style="background-color:rgb(183, 183, 221);" (click)="staffregister()" ><i style="font-size:x-large;"
-                class="bi bi-person-fill-add"></i>&nbsp;&nbsp; Staff</h1><br>
-        <h1 style="background-color:rgb(183, 183, 221);"><i style="font-size:x-large;"
-                class="bi bi-bar-chart-line-fill"></i>&nbsp;&nbsp;product-details</h1><br>
-        <h1 style="background-color:rgb(183, 183, 221);" > <i style="font-size:x-large;"
-            class="bi bi-bank2"></i>&nbsp;&nbsp;about</h1><br>
-</div>
-<div class="bright">
-    <div class="container">
-       
-        <div class="right"><br>
-<h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  !important; font-size: 4vh;">Staff details</h1>
-            <div class="table-container" >
-                <table>
-                    <thead>
-                        <tr>
-                            <th>name</th>
- 
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody style="margin-top: 15px;" *ngFor="let employee of returnArray">
-                    
-                        <td>{{employee.name}}</td> -->
-                        <!-- <td>{{employee.Phone}}</td> -->
-                        
-                        <!-- <td><button style="font-size: 4vh; background: none ; border: none; color: #1442e9;"> -->
-                                <!-- (click)="toggleDialog(employee);  editAction(employee);" -->
-                                <!-- <i style="font-size: 30px;" class="bi bi-person-badge"></i>
-                            </button>
-                        </td>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    
-</div>
-
-    </div>
-  
-
-
-</div> -->
-
-
-<!-- <p>staffdashboard works!</p>
-<button (click)="logout()">logout</button> -->
-
-<!-- <div *ngIf="showsplash" class="splashbackground" > -->
-
-    <!-- <div   class="splashbody">
-    <div   (touchstart)="handleButtonTouchUp()"  id="hand">
-    <img  src="/assets/images/hand2.png" alt="">
-    </div>
-    </div> -->
-    
-    <!-- </div>  -->
-    
     
     <div class="background" >
         <div class="container">
@@ -345,9 +117,9 @@
                                   </div>
                                 </div>
                             </div>
-                            <div style="margin-left: 1vw; display: flex;flex-direction: row;">
+                            <div style="margin-right: 1vw; display: flex;flex-direction: row;">
                                 <div  >
-                                    <input type="text" name="SID" readonly [placeholder]="SID" [value]="SID" formControlName="SID">
+                                    <input type="text" name="SID" readonly [placeholder]="SIDs" [value]="SIDs"  formControlName="SID">
                                 </div>
                                 <div style="display: flex; align-items: center;justify-content: center;width: 25vw;flex-direction: column;">
                                     <div style="display: flex; align-items: center;justify-content: center;width: 25vw;">
@@ -364,14 +136,14 @@
                                 </div>
                                 </div>
                             </div>
-                            <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
-                                <p style="font-size: 2.5vh;font: 200;">Secect Branch</p>
-                                <select  formControlName="Section" placeholder="Section">
-                                <!-- <option  value="">Secect Branch ▼</option> -->
-                                
-
+                            <div style="width: 30svw;height: 12vh; display: flex;align-items: center;justify-content: center;flex-direction: column;">
+                              
+                                 
+                                 <p style="font-weight: 600;">Secect Branch &nbsp;&nbsp;&nbsp;&nbsp;
+                                 <select  formControlName="Section" placeholder="Section">
+                                    <!-- <option  value="" selected >Secect Branch ▼</option> -->
                                     <option *ngFor="let value of categories" [value]="value">{{value}}</option>
-                                </select><br>
+                                </select></p>
                                 <div id="snumber" *ngIf="createEmployeeForm.get('Gender')?.errors && createEmployeeForm.get('Gender')!.touched" class="error">
                                     Please select a gender.
                                 </div>

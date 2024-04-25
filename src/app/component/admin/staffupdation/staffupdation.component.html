@@ -1,89 +1,15 @@
 <!-- <button (click)="logout()">logout</button> -->
-<!-- <div class="container">
 
-    <div class="header">
-        <div class="hleft">
-            <h2>ClothingBoutiques</h2>
-        </div>
-        <div class="hright">
-        </div>
-    </div>
 
-    <div class="body">
-<div class="bleft">
-        <img src="/assets/images/admin/db.jpg">
-        <h1 style="color:black" (click)="admindashboard()"> <i style="font-size:x-large;"
-                class="bi bi-house-door-fill"></i>&nbsp;&nbsp;Home </h1><br>
-        <h1 style="background-color:rgb(183, 183, 221);" (click)="staffregister()" ><i style="font-size:x-large;"
-                class="bi bi-person-fill-add"></i>&nbsp;&nbsp; Staff</h1><br>
-        <h1 style="background-color:rgb(183, 183, 221);"><i style="font-size:x-large;"
-                class="bi bi-bar-chart-line-fill"></i>&nbsp;&nbsp;product-details</h1><br>
-        <h1 style="background-color:rgb(183, 183, 221);" > <i style="font-size:x-large;"
-            class="bi bi-bank2"></i>&nbsp;&nbsp;about</h1><br>
-</div>
-<div class="bright">
+<div class="background">
     <div class="container">
-       
-        <div class="right"><br>
-<h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  !important; font-size: 4vh;">Staff details</h1>
-            <div class="table-container" >
-                <table>
-                    <thead>
-                        <tr>
-                            <th>name</th>
- 
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody style="margin-top: 15px;" *ngFor="let employee of returnArray">
-                    
-                        <td>{{employee.name}}</td> -->
-                        <!-- <td>{{employee.Phone}}</td> -->
-                        
-                        <!-- <td><button style="font-size: 4vh; background: none ; border: none; color: #1442e9;"> -->
-                                <!-- (click)="toggleDialog(employee);  editAction(employee);" -->
-                                <!-- <i style="font-size: 30px;" class="bi bi-person-badge"></i>
-                            </button>
-                        </td>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    
-</div>
-
-    </div>
-  
-
-
-</div> -->
-
-
-<!-- <p>staffdashboard works!</p>
-<button (click)="logout()">logout</button> -->
-
-<!-- <div *ngIf="showsplash" class="splashbackground" > -->
-
-    <!-- <div   class="splashbody">
-    <div   (touchstart)="handleButtonTouchUp()"  id="hand">
-    <img  src="/assets/images/hand2.png" alt="">
-    </div>
-    </div> -->
-    
-    <!-- </div>  -->
-    
-    
-    <div class="background" >
-        <div class="container">
-            <div class="header">
-                <div class="navs">
-                    <div class="nave">   
-                                     <input type="checkbox" id="menu">
+        <div class="header">
+            <div class="navs">
+                <div class="nave">
+                    <input type="checkbox" id="menu">
                     <label for="menu" class="icon">
-                            <div class="menu"></div>
-                     </label>
-                    
+                        <div class="menu"></div>
+                    </label>
                     <nav>
                         <ul>
                             <!-- <li>
@@ -93,21 +19,21 @@
                                 <i (click)="home()" id="li" class="bi bi-bag-plus-fill">&nbsp;&nbsp;Home</i>
                             </li>
                             <li>
-                                <i (click)="staffregister()" id="li" class="bi bi-building-add">&nbsp;&nbsp;Staff_Registration</i>
+                                <i (click)="staffregister()" id="li"
+                                    class="bi bi-building-add">&nbsp;&nbsp;Staff_Registration</i>
                             </li>
                             <li>
-                                <i  id="li" class="bi bi-bar-chart">&nbsp;&nbsp;Analysis</i> 
+                                <i id="li" class="bi bi-bar-chart">&nbsp;&nbsp;Analysis</i>
                             </li>
                             <li>
-                                <i id="li" class="bi bi-truck">&nbsp;&nbsp;Delivery</i> 
+                                <i id="li" class="bi bi-truck">&nbsp;&nbsp;Delivery</i>
                             </li>
-                          
                         </ul>
                     </nav>
                 </div>
-    
-                    <!-- <div> <img src="/assets/images/foodlogo.png" alt=""></div> -->
-                    <div> <i (click)="profile()" id="profilelogo" class="bi bi-person-circle"></i>
+
+                <!-- <div> <img src="/assets/images/foodlogo.png" alt=""></div> -->
+                <!-- <div> <i (click)="profile()" id="profilelogo" class="bi bi-person-circle"></i>
                     <div class="profilebackground" *ngIf="profileopen">
     <div class="profilebody">
         <div class="cancel">
@@ -120,40 +46,27 @@
             </div>
     
     </div>
-    <!-- <div id="listborder" *ngFor="let staffData of staffDatas" > -->
-    
-        <!-- <p id="name">{{staffData.Name}}</p>
-        <p id="name">ID:{{staffData.SID}}</p>
-        <p id="name">Section:{{staffData.Section}}</p> -->
-    
-    <!-- </div> -->
     <button id="logout" (click)="logout()">logout</button> 
     <h1>hai</h1>
     
     </div>
                     </div>
-                    
-                    
-                    </div>
+                    </div> -->
+            </div>
+            <!--search-->
+            <div class="search">
+                <div><i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search" (input)="searchstaff()" [(ngModel)]="searchparam">
                 </div>
-                <!-- <div class="search">
-                    <div><i class="bi bi-search"></i>
-                      
-                                <input     type="text" placeholder="    Search" >
-                    </div>
-    
-                 
-    
-                </div> -->
-                
-                <div class="headerpopup" >
+            </div>
 
-                    <div class="table">
-                        <table>
-                            <thead>
+            <!--body-->
+            <div class="headerpopup">
+                <div class="table">
+                    <table>
+                        <thead>
                             <tr>
                                 <th>SID</th>
-
                                 <th>Staffname</th>
                                 <th>Date</th>
                                 <th>Snumber</th>
@@ -165,185 +78,135 @@
                             </tr>
                         </thead>
                         <tbody *ngFor="let staff of getallstaff ">
+
                             <td>{{staff.data.SID}}</td>
-                            <td><p>{{staff.data.Staffname}}</p></td>
-                            <td><p>{{staff.data.Date}}</p></td>
+                            <td>{{staff.data.Staffname}}</td>
+                            <td>{{staff.data.Date}}</td>
                             <td>{{staff.data.Snumber}}</td>
                             <td>{{staff.data.Ssalary}}</td>
                             <td>{{staff.data.Gender}}</td>
                             <td>{{staff.data.Section}}</td>
-                            <td>  <button (click)="editaction(staff)" > <i class="bi bi-pencil-square" ></i>
-                            </button></td>
-                            <td><button >
-                                <i class="bi bi-trash3-fill"></i>
-                            </button> 
+                            <td> <button  (click)="editaction(staff)" id="editaction" > <i class="bi bi-pencil-square"></i>
+                                </button></td>
+                            <td><button (click)="performDelete(staff)"  id="editaction">
+                                <i  class="bi bi-trash3"></i>
+                                </button>
                             </td>
-                     
-                        </tbody>
-                        </table>
-                    </div>
-    <!-- <div>
-    <p>Top Recipes</p>
-    </div>
-    <div class="headerpopbody">
-    <div class="box">
-    <div id="img">
-    <img src="/assets/images/veg.jpg" alt="">
-    </div>
-    <div>
-    <p> veg</p>
-    </div>
-    
-    </div>
-    <div class="box">
-        <div id="img">
-            <img src="/assets/images/nonveg.jpg" alt="">
-            </div>
-            <div>
-                <p> Non-Veg</p>
-                </div>
-    
-    </div>
-    
-    </div>
-    
-    <div class="headerpopbody">
-    
-    <div class="box">
-        <div id="img">
-            <img src="/assets/images/noodel.jpg" alt="">
-            </div>
-            <div>
-                <p> Noodels</p>
-                </div>
-    
-    </div> -->
-    <!-- <div class="box">
-        <div id="img">
-            <img src="/assets/images/icecream.jpg"  alt="">
-            </div>
-            <div>
-                <p> Ice creams</p>
-                </div>
-    
-    </div> -->
-    <!-- </div> -->
-    
-      </div>
-    
-                </div>
-    
-    
-    
-            </div>
-            <!-- //
-            <div class="body">
-    
-    <div class="cheffimage">
-    
-    
-    <img src="/assets/images/chef.png" alt="">
-    
-        
-    
-             <div class="bodycontent">
-    <div id="product">
-                <div class="productimg">
-                    <i class="bi bi-bag-plus-fill"></i>
-                </div>
-                <div class="productdetails">
-    <p (click)="showPopup1()">Add<br> Product</p>
-    <div class="popup1" *ngIf="isPopupVisible1">Click menu!</div>
-    
-                </div>
-            </div>
-        <div id="product">
-                <div class="productimg">
-                    <i class="bi bi-building-add"></i>
-    
-                    
-                </div>
-                <div class="productdetails">
-    <p (click)="showPopup2()">Add restaurant</p>
-    <div class="popup2" *ngIf="isPopupVisible2">Click menu!</div>
-    
-                </div>
-                </div>
-                <div id="product">
-                    <div class="productimg">
-                        <i class="bi bi-bar-chart"></i>
-                        
-                    </div>
-                    <div class="productdetails">
-                        <p (click)="showPopup3()">Analysis</p>
-    <div class="popup3" *ngIf="isPopupVisible3">Click menu!</div>
-    
-                    </div>
-    
-                    </div>
-                    <div id="product">
-                        <div class="productimg">
-            
-                            <i class="bi bi-truck"></i>
-                        </div>
-                        <div class="productdetails">
-    <p (click)="showPopup4()">Delivary</p>
-    <div class="popup4" *ngIf="isPopupVisible4">Click menu!</div>
-    
-    
-                        </div>
-                        
-                        </div>
-    
-    
-             </div>
-            
-    
-    </div>
-    
-    
-    
-        </div> -->
-        <div class="footer">
-            <p style="color: wheat;font-size: 1.3vh;">clothingboutiques@gmail.com</p>
-            </div>
-        </div>
-    
 
-        <div class="editpopup" *ngIf="editdialogbox">
-            <div class="editbody">
-                <form action="" [formGroup]="EditGroup">
-                    <div>
-                        <input type="text" formControlName="Staffname" placeholder="StaffName">
-                        <input type="text" readonly [placeholder]="formattedDate"  formControlName="Date" >
-                    </div>
-                    <div>
-                        <input type="number" formControlName="Snumber" placeholder="S-number">
-                        <input type="number" formControlName="Ssalary" placeholder="S-salary">
-                    </div>
-                    <div style="margin-left: -1.5vw; display: flex;flex-direction: row;">
-                        <div  >
-                            <input type="text" name="SID" readonly [placeholder]="SID" [value]="SID" formControlName="SID">
-                        </div>
-                        <div style="display: flex; align-items: center;justify-content: center;width: 20vw;">
-                            <label class="radio-label">
-                                <input  type="radio" name="Gender" value="male" formControlName="Gender"> Male
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="Gender" value="female" formControlName="Gender"> Female
-                            </label>
-                        </div>
-                    </div>
-                    <div>
-                        <select  formControlName="Section" aria-placeholder="Section">
-                            <option value="">Secect Branch ▼</option>
-                            <option *ngFor="let value of categories" [value]="value">{{value}}</option>
-                        </select>
-                    </div><br>
-                    <button (click)="updatestaff()">Update</button>
-                </form>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="footer">
+                    <p style="color: wheat;font-size: 1.3vh;">clothingboutiques@gmail.com</p>
+                </div>
             </div>
-<button (click)="edit()">close</button>
-        </div>
+<div class="Deletepopup"  *ngIf="deletepopup">
+    <div class="delelepopupbody">
+        <!-- <button >delete</button> -->
+        <div class="deleteheader">
+            <div class="deletebordericon">
+        <i class="bi bi-exclamation-triangle"></i>
         
+    </div>
+    <div style="align-items: center;display: flex;justify-content: center;flex-direction: column;">     
+        <p> Are You Sure ?</p>
+        <h5>You Want to delete this items  </h5>
+    </div>
+
+    </div>
+    <div class="deletefooter">
+        <div class="deletedata">
+        <td>StaffID  &nbsp;&nbsp;: {{deleteItems.data.SID}}</td>
+        <td> Name   &nbsp;&nbsp;&nbsp;: {{deleteItems.data.Staffname}}</td>
+        <td> Section &nbsp;: {{deleteItems.data.Section}}</td>
+    </div>
+        <button id="deletebutton" (click)="deleteaction()">Delete field</button>
+    </div>
+
+    </div>
+    <button id="cancelbutton1" (click)="deletecancel()"><i class="bi bi-x-lg"></i></button>
     
+</div>
+
+            <div class="editpopup" *ngIf="editdialogbox">
+                <div class="editbody">
+                    <form action="" [formGroup]="EditGroup">
+                        <div style="align-items: center; width: 60vw;display: flex;justify-content: center;">
+                            <div style="display: flex;align-items: center;justify-content: center;flex-direction: column;">                                
+                            <input type="text" formControlName="Staffname" placeholder="StaffName">
+                            <div  *ngIf="EditGroup.get('Staffname')?.invalid && EditGroup.get('Staffname')?.touched">
+                                <div id="sname" *ngIf="EditGroup.get('Staffname')?.errors?.hasOwnProperty('required')">
+                                  Staff Name is required.
+                                </div>   <div  id="sname" *ngIf="EditGroup.get('Staffname')?.errors?.hasOwnProperty('pattern')">
+                                    Please enter a valid name (letters and spaces only).
+                                </div>
+
+                              </div>
+                            </div>
+<div >
+                            <input type="text" readonly [placeholder]="formattedDate"  formControlName="Date" >
+                        </div>
+                        </div>
+                        <div style="align-items: center; width: 60vw;display: flex;justify-content: center;">
+                            <div style="display: flex;align-items: center;justify-content: center;flex-direction: column;" >
+                            <input type="number" formControlName="Snumber" placeholder="S-number">
+                            <div *ngIf="EditGroup.get('Snumber')?.invalid && EditGroup.get('Snumber')?.touched">
+                                <div id="snumber" *ngIf="EditGroup.get('Snumber')?.errors?.hasOwnProperty('required')">
+                                  S-number is required.
+                                </div>
+                                <div id="snumber" *ngIf="EditGroup.get('Snumber')?.errors?.hasOwnProperty('pattern')">
+                                  Please enter a valid number.
+                                </div>
+                              </div>
+</div>
+<div>
+
+                            <input type="number" formControlName="Ssalary" placeholder="S-salary">
+                            <div *ngIf="EditGroup.get('Ssalary')?.invalid && EditGroup.get('Ssalary')?.touched">
+                                <div id="snumber" *ngIf="EditGroup.get('Ssalary')?.errors?.hasOwnProperty('required')">
+                                  S-salary is required.
+                                </div>
+                                <div id="snumber" *ngIf="EditGroup.get('Ssalary')?.errors?.hasOwnProperty('pattern')">
+                                  Please enter a valid number.
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div style="align-items: center; width: 50vw;height:20vh; display: flex;justify-content: center;">
+                            <div  >
+                                <input   type="text" name="SID" readonly [placeholder]="SID"  [value]="SID" formControlName="SID">
+                            </div>
+                            <div >
+                                <div >
+                                <label class="radio-label" >
+                                    <input style="width: 5vw;" type="radio" name="Gender" value="male" formControlName="Gender"> Male
+                                </label>
+                                <label class="radio-label">
+                                    <input style="width: 6vw;"  type="radio" name="Gender" value="female" formControlName="Gender"> Female
+                                </label>
+                           
+                            </div>
+                            <div id="snumber" *ngIf="EditGroup.get('Gender')?.errors && EditGroup.get('Gender')!.touched" class="error">
+                                Please select a gender.
+                            </div>
+                            </div>
+                        </div>
+                        <div style="width: 30svw;height: 12vh; display: flex;align-items: center;justify-content: center;flex-direction: column;">
+                          
+                             
+                             <p style="font-weight: 600;">Secect Branch &nbsp;&nbsp;&nbsp;&nbsp;
+                             <select  formControlName="Section" placeholder="Section">
+                                <!-- <option  value="" selected >Secect Branch ▼</option> -->
+                                <option *ngFor="let value of categories" [value]="value">{{value}}</option>
+                            </select></p>
+                            <div id="snumber" *ngIf="EditGroup.get('Gender')?.errors && EditGroup.get('Gender')!.touched" class="error">
+                                Please select a gender.
+                            </div>
+
+                        </div>
+                        <button [disabled]="!EditGroup.valid" (click)="validation()" >Add</button>                      
+                    </form>
+                </div>
+                <button id="editbutton" (click)="edit()"><i class="bi bi-x-lg"></i></button>
+            </div>

@@ -36,8 +36,7 @@ if(localStorage.getItem('staffupdate')){
   }
 
   read(){
-    this.adminservice.read().subscribe((res: any)=>{;
-      
+    this.adminservice.read().subscribe((res: any)=>{
 this.returnArray=res.rows.map((item:any)=>{
   return item.key.data
 })
